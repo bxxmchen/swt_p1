@@ -31,24 +31,23 @@ public class Main extends JFrame implements ActionListener, MouseListener {
     }
 
     /**
-     * The method paint asks for the method drawCircle.
+     * The method paint asks for the method drawRectangle.
      * @param g Graphics
      */
     @Override
     public void paint(Graphics g) {
-        drawCircle(x, y);
+        drawRectangle(x, y);
     }
 
     /**
-     * The method drawCircle paints the circles.
+     * The method drawRectangle paints the squares.
      * @param x x-value
      * @param y y-value
      */
-    public void drawCircle(int x, int y) {
+    public void drawRectangle(int x, int y) {
         Graphics g = this.getGraphics();
         g.setColor(Color.orange);
-        g.drawOval(x-20, y-20, 40, 40);
-        g.fillOval(x-20, y-20, 40, 40);
+        g.fillRect(x-20, y-20, 40, 40);
     }
 
     /**
